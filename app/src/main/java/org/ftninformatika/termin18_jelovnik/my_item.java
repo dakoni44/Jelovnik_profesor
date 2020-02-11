@@ -18,8 +18,9 @@ public class my_item extends AppCompatActivity {
         setContentView(R.layout.activity_my_item);
 
         int id=getIntent().getExtras().getInt("position", 0);
-        textView1.findViewById(R.id.tv1);
-        textView2.findViewById(R.id.tv2);
+        textView1=findViewById(R.id.tvIme);
+        textView2=findViewById(R.id.tvPrezime);
         textView1.setText(dp.getJeloById(id).getName());
+        textView2.setText(String.valueOf(dp.getJeloById(id).getCena()));
     }
 }
